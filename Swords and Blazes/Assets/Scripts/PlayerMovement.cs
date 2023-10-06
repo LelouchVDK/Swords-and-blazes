@@ -21,46 +21,37 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         m_playerMovement = GravityDirection.Down;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        switch (m_playerMovement) 
-        { 
-            case GravityDirection.Left:
-                Physics2D.gravity = new Vector2(-10f, 0);
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    m_playerMovement = GravityDirection.Left;
-                }
-                break;
-
-            case GravityDirection.Right:
+    {     
+            if (Input.GetKeyDown(KeyCode.D))
+            {
                 Physics2D.gravity = new Vector2(10f, 0);
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    m_playerMovement = GravityDirection.Right;
-                }
-                break;    
+                m_playerMovement = GravityDirection.Right;
+            }
+            
 
-            case GravityDirection.Up:
+                
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                Physics2D.gravity = new Vector2(-10f, 0);
+                m_playerMovement = GravityDirection.Left;
+            } 
+
+                
+            if (Input.GetKeyDown(KeyCode.W))
+            {
                 Physics2D.gravity = new Vector2(0, 10f);
-                if (Input.GetKeyDown(KeyCode.W))
-                {
-                    m_playerMovement = GravityDirection.Up;
-                }
-                break;
-
-            case GravityDirection.Down:
+                m_playerMovement = GravityDirection.Up;
+            }
+                
+            if (Input.GetKeyDown(KeyCode.S))
+            {
                 Physics2D.gravity = new Vector2(0, -10f);
-                if (Input.GetKeyDown(KeyCode.S))
-                {
-                    m_playerMovement = GravityDirection.Down;
-                }
-                break;
+                m_playerMovement = GravityDirection.Down;
+            }
         }
     }
-
-    
-}
