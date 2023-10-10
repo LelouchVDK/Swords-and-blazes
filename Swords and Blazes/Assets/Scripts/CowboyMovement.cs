@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class CowboyMovement : MonoBehaviour
 {
-
-    
 
     
 
@@ -14,13 +12,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {     
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 Vector2 right = new Vector2(100f, 0);
                 rb.AddForce(right);
@@ -29,27 +28,23 @@ public class PlayerMovement : MonoBehaviour
             
 
                 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Vector2 left = new Vector2(-100f, 0);
                 rb.AddForce(left);
-                
             } 
 
                 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 Vector2 up = new Vector2(0, 100f);
                 rb.AddForce(up);
-                
             }
                 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 Vector2 down = new Vector2(0, -100f);
                 rb.AddForce(down);
-                
             }
-            
-    }
+        }
     }

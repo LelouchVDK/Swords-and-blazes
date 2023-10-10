@@ -255,7 +255,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 1433756996}
   - component: {fileID: 1433756995}
   - component: {fileID: 1433756997}
+  - component: {fileID: 1433756998}
   m_Layer: 0
   m_Name: cowboy_placeholder
   m_TagString: Player
@@ -984,6 +985,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1433756998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433756994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2aab653178d43d47a4bbb113eb972af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1661126650
 GameObject:
   m_ObjectHideFlags: 0
