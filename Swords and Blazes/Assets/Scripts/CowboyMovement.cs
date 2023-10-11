@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CowboyMovement : MonoBehaviour
 {
-
+    public bool faceLeft;
     
 
     Rigidbody2D rb;
@@ -24,7 +24,9 @@ public class CowboyMovement : MonoBehaviour
         {
             Vector2 right = new Vector2(m_cowboyMovementSpeed, 0);
             rb.AddForce(right);
-                
+            transform.localScale = new Vector3(-1, 1, 1);
+            faceLeft = false;
+
         }
             
 
@@ -33,6 +35,8 @@ public class CowboyMovement : MonoBehaviour
         {
             Vector2 left = new Vector2(-m_cowboyMovementSpeed, 0);
             rb.AddForce(left);
+            transform.localScale = new Vector3(1, 1, 1);
+            faceLeft = true;
         }
 
         

@@ -5,13 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    
-
-    
-
     Rigidbody2D rb;
     public float m_knightMovementSpeed;
+    public bool faceLeft;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +22,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 Vector2 right = new Vector2(m_knightMovementSpeed, 0);
                 rb.AddForce(right);
-                
+                transform.localScale = new Vector3(-1, 1, 1);
+                faceLeft = false;
+
             }
         
 
-
-        if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 Vector2 left = new Vector2(-m_knightMovementSpeed, 0);
                 rb.AddForce(left);
-                
+                transform.localScale = new Vector3(1, 1, 1);
+                faceLeft = true;
+
             } 
 
                 
@@ -51,6 +51,21 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(down);
                 
             }
-            
+
+
+            // Flips the character when moving left/right. -Victoria
+        /* if (faceLeft && m_knightMovementSpeed < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            faceLeft = true;
+        }
+
+        if (!faceLeft && m_knightMovementSpeed > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            faceLeft = false;
+        }*/
+
+
     }
-    }
+}
