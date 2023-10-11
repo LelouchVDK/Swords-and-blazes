@@ -26,10 +26,13 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(right);
                 
             }
-            
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+        {
+            rb.AddForce(-rb.velocity);
+        }
 
-                
-            if (Input.GetKeyDown(KeyCode.A))
+
+        if (Input.GetKeyDown(KeyCode.A))
             {
                 Vector2 left = new Vector2(-100f, 0);
                 rb.AddForce(left);

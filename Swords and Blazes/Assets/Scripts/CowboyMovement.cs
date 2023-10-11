@@ -25,17 +25,22 @@ public class CowboyMovement : MonoBehaviour
                 rb.AddForce(right);
                 
             }
-            
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow))
+            {
+                rb.AddForce(-rb.velocity);
+            }
 
-                
+
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Vector2 left = new Vector2(-100f, 0);
                 rb.AddForce(left);
-            } 
+            }
 
-                
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+        
+
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 Vector2 up = new Vector2(0, 100f);
                 rb.AddForce(up);
