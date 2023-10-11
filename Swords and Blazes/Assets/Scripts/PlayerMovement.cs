@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     Rigidbody2D rb;
+    public float m_knightMovementSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,36 +21,33 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {     
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
-                Vector2 right = new Vector2(100f, 0);
+                Vector2 right = new Vector2(m_knightMovementSpeed, 0);
                 rb.AddForce(right);
                 
             }
-        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
-        {
-            rb.AddForce(-rb.velocity);
-        }
+        
 
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
             {
-                Vector2 left = new Vector2(-100f, 0);
+                Vector2 left = new Vector2(-m_knightMovementSpeed, 0);
                 rb.AddForce(left);
                 
             } 
 
                 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
-                Vector2 up = new Vector2(0, 100f);
+                Vector2 up = new Vector2(0, m_knightMovementSpeed);
                 rb.AddForce(up);
                 
             }
                 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
-                Vector2 down = new Vector2(0, -100f);
+                Vector2 down = new Vector2(0, -m_knightMovementSpeed);
                 rb.AddForce(down);
                 
             }
