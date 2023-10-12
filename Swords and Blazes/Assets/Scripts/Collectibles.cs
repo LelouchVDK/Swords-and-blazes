@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Collectibles : MonoBehaviour
 {
@@ -19,7 +18,6 @@ public class Collectibles : MonoBehaviour
 
     private int coins = 0;
 
-    [SerializeField] private Text CoinsCounter;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Coin"))
@@ -27,7 +25,6 @@ public class Collectibles : MonoBehaviour
             Destroy(collision.gameObject);
             coins++;
             Debug.Log("Coins: " + coins);
-            CoinsCounter.text = "Coins: " + coins;
         }
     }
 
