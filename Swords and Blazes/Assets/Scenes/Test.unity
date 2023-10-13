@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb62980b2a3e5604599a84ff4ed7f942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsCounter: {fileID: 540135297}
+  CoinCounter: {fileID: 540135297}
 --- !u!1 &413128987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 435.8, y: 142.49998}
+  m_AnchoredPosition: {x: 430.2, y: 190.14998}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164112713
@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb62980b2a3e5604599a84ff4ed7f942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsCounter: {fileID: 1743984105}
+  CoinCounter: {fileID: 1743984105}
 --- !u!1 &1661126650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,7 +1804,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 435.8, y: 165.4}
+  m_AnchoredPosition: {x: 430.2, y: 213.05}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743984105
