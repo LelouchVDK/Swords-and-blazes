@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coins
   - Coin
+  - Border
   layers:
   - Default
   - TransparentFX
