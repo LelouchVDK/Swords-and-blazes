@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CowboyMovement : MonoBehaviour
 {
-    public bool faceLeft;
+    [HideInInspector] public bool faceLeft;
     
 
     Rigidbody2D rb;

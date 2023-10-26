@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float m_knightMovementSpeed;
-    public bool faceLeft;
+    [HideInInspector] public bool faceLeft;
 
     // Start is called before the first frame update
     void Start()
