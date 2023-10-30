@@ -2110,7 +2110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 1433756996}
   bullet: {fileID: 939470795}
-  cowboy: {fileID: 0}
+  cowboy: {fileID: 1433756994}
   mouse_pos: {x: 0, y: 0}
 --- !u!1 &1571095157
 GameObject:
