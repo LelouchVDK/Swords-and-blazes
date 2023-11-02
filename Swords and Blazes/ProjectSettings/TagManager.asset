@@ -9,6 +9,7 @@ TagManager:
   - Border
   - Knight
   - Cowboy
+  - Cactus
   layers:
   - Default
   - TransparentFX

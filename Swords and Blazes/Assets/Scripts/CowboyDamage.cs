@@ -20,7 +20,7 @@ public class CowboyDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == "Knight")
         {
-            knightHealth.KnightTakeDamage(1);
+            knightHealth.KnightTakeDamage(10);
         }
     }
 }
