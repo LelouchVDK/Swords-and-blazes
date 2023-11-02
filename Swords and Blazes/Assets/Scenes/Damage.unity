@@ -645,13 +645,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1317845603}
   - component: {fileID: 1317845602}
+  - component: {fileID: 1317845604}
   - component: {fileID: 1317845601}
   - component: {fileID: 1317845600}
+  - component: {fileID: 1317845605}
   - component: {fileID: 1317845599}
   - component: {fileID: 1317845598}
   m_Layer: 0
   m_Name: knight_placeholder
-  m_TagString: Player
+  m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,6 +814,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317845604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317845597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a60060e6d6de184d9a1b241af300d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knightMaxHealth: 100
+  knightCurrentHealth: 0
+--- !u!114 &1317845605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317845597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a6751a72805a449bed3319e036a668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowboyHealth: {fileID: 1654607601}
 --- !u!1 &1409385578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,10 +1119,12 @@ GameObject:
   - component: {fileID: 1654607597}
   - component: {fileID: 1654607596}
   - component: {fileID: 1654607595}
+  - component: {fileID: 1654607602}
   - component: {fileID: 1654607594}
+  - component: {fileID: 1654607601}
   m_Layer: 0
   m_Name: cowboy_placeholder
-  m_TagString: Player
+  m_TagString: Cowboy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1271,6 +1302,33 @@ Transform:
   - {fileID: 1427832716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654607601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654607593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae238c409cbb70d4099d07d4dc8edc87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowboyMaxHealth: 100
+  cowboyCurrentHealth: 0
+--- !u!114 &1654607602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654607593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699837700939b8b4db8b659a134bcb48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knightHealth: {fileID: 1317845604}
 --- !u!1 &1734136044
 GameObject:
   m_ObjectHideFlags: 0

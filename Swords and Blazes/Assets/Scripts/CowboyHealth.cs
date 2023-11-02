@@ -14,8 +14,12 @@ public class CowboyHealth : MonoBehaviour
     }
 
 
-    void TakeDamage(int damage)
+    public void CowboyTakeDamage(int amount)
     {
-        cowboyCurrentHealth -= damage;
+        cowboyCurrentHealth -= amount;
+        if(cowboyCurrentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

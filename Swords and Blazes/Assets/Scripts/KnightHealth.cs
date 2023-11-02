@@ -13,8 +13,12 @@ public class KnightHealth : MonoBehaviour
         knightCurrentHealth = knightMaxHealth;
     }
 
-    void KnightDamage(int damage)
+    public void KnightTakeDamage(int amount)
     {
-        knightCurrentHealth -= damage;
+        knightCurrentHealth -= amount;
+        if (knightCurrentHealth < 0 ) 
+        {
+            Destroy(gameObject);
+        }
     }
 }
