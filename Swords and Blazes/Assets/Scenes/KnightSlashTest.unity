@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 108129106}
   - component: {fileID: 108129108}
   - component: {fileID: 108129109}
+  - component: {fileID: 108129110}
   m_Layer: 0
   m_Name: knight_placeholder
   m_TagString: Player
@@ -389,6 +390,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitbox: {fileID: 1242003670567694304, guid: 5a28958a3f34bc0499ba649be9d279df, type: 3}
+--- !u!95 &108129110
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108129101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 817dc188a49886848a33c69f7a5285a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &233904305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,11 +1660,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4787774887158815991, guid: b4706fb0893f5534e9c536f8f0af240b, type: 3}
   m_PrefabInstance: {fileID: 939470793}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &939470795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6690583646254122393, guid: b4706fb0893f5534e9c536f8f0af240b, type: 3}
-  m_PrefabInstance: {fileID: 939470793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1164112711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,10 +2139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e61547d85975348b3808fe609ff99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingPoint: {fileID: 1433756996}
-  bullet: {fileID: 939470795}
-  cowboy: {fileID: 0}
-  mouse_pos: {x: 0, y: 0}
 --- !u!1 &1571095157
 GameObject:
   m_ObjectHideFlags: 0

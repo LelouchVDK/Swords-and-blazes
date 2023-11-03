@@ -7,6 +7,7 @@ public class KnightSlash : MonoBehaviour
     // Creating a gameobject variable for the hitbox.
     public GameObject hitbox;
     private Vector3 direction = Vector3.left;
+    
 
     private void FixedUpdate()
     {
@@ -26,7 +27,7 @@ public class KnightSlash : MonoBehaviour
 
         // ^^ Disabled for now to try out some other code.
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 5.5f);
+       // RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 5.5f);
 
 
 
