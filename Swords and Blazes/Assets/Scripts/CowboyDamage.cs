@@ -5,6 +5,7 @@ using UnityEngine;
 public class CowboyDamage : MonoBehaviour
 {
     public KnightHealth knightHealth;
+    public CowboyHealth cowboyHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,10 @@ public class CowboyDamage : MonoBehaviour
         if (collision.gameObject.tag == "Knight")
         {
             knightHealth.KnightTakeDamage(10);
+        }
+        if (collision.gameObject.tag == "Cactus")
+        {
+            cowboyHealth.CowboyTakeDamage(10);
         }
     }
 }
