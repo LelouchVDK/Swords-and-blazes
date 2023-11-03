@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(right);
                 transform.localScale = new Vector3(-1, 1, 1);
                 faceLeft = false;
-                knightAnimator.SetBool("FaceLeftRight", true);
+                // knightAnimator.SetBool("FaceLeftRight", true);
                 
 
 
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(left);
                 transform.localScale = new Vector3(1, 1, 1);
                 faceLeft = true;
-                knightAnimator.SetBool("FaceLeftRight", true);
+                // knightAnimator.SetBool("FaceLeftRight", true);
 
 
         } 
