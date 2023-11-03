@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,11 +9,30 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float m_knightMovementSpeed;
     [HideInInspector] public bool faceLeft;
+    private Animator knightAnimator;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        knightAnimator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            knightAnimator.SetBool("Slash", true);
+            Debug.Log("I'm Slashing!!!");
+            
+        }
+        else
+        {
+            knightAnimator.SetBool("Slash", false);
+        }
+
+      
     }
 
     // Update is called once per frame
@@ -24,8 +44,11 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(right);
                 transform.localScale = new Vector3(-1, 1, 1);
                 faceLeft = false;
+                knightAnimator.SetBool("FaceLeftRight", true);
+                
 
-            }
+
+        }
         
 
             if (Input.GetKey(KeyCode.A))
@@ -34,8 +57,10 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(left);
                 transform.localScale = new Vector3(1, 1, 1);
                 faceLeft = true;
+                knightAnimator.SetBool("FaceLeftRight", true);
 
-            } 
+
+        } 
 
                 
             if (Input.GetKey(KeyCode.W))
@@ -53,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
 
-            // Flips the character when moving left/right. -Victoria
+
         /* if (faceLeft && m_knightMovementSpeed < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
