@@ -7,6 +7,9 @@ TagManager:
   - Coins
   - Coin
   - Border
+  - Knight
+  - Cowboy
+  - Cactus
   layers:
   - Default
   - TransparentFX
