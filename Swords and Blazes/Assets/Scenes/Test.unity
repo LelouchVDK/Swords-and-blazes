@@ -2114,6 +2114,7 @@ MonoBehaviour:
   cowboy: {fileID: 1433756994}
   render: {fileID: 1433757003}
   offset: {x: -0.75, y: 0}
+  faceDir: {fileID: 1433756998}
 --- !u!120 &1433757003
 LineRenderer:
   serializedVersion: 2
