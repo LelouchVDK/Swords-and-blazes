@@ -21,7 +21,7 @@ public class KnightMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             knightAnimator.SetBool("Slash", true);
             Debug.Log("I'm Slashing!!!");
