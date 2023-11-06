@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8921163818102330506}
   - component: {fileID: 7417283423375488484}
   - component: {fileID: 2976467400636621363}
+  - component: {fileID: 1519231105192551448}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Player
@@ -213,3 +214,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1519231105192551448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341146902470326932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a6751a72805a449bed3319e036a668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowboyHealth: {fileID: 0}
+  knightHealth: {fileID: 0}

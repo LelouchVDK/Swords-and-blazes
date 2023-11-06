@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class KnightMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float m_knightMovementSpeed;
