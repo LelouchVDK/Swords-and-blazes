@@ -13,6 +13,7 @@ public class Shoot : MonoBehaviour
     public LineRenderer render;
     public Vector2 offset;
     public CowboyMovement faceDir;
+    public KnightHealth knight;
 
     // Start is called before the first frame update
     void Start()
@@ -24,18 +25,19 @@ public class Shoot : MonoBehaviour
     void Update()
     {
 
+        Vector2 screen_pos = Input.mousePosition;
+        Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
+        Aim(world_pos);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bullet, shootingPoint.position, transform.rotation);
+            Instantiate(bullet, screen_pos, transform.rotation);
         }
         if (!faceDir.faceLeft)
         {
             offset = -offset;
         }
-        Vector2 screen_pos = Input.mousePosition;
-        Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
-        Aim(world_pos);
+        
     }
     void Aim(Vector2 target)
     {
