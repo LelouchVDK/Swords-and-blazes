@@ -20,12 +20,12 @@ public class Collectibles : MonoBehaviour
 
     }
 
-    IEnumerator Respawn (Collider2D collision, int time)
-    {
-        yield return new WaitForSeconds(time);
+    //IEnumerator Respawn (Collider2D collision, int time)
+    //{
+       // yield return new WaitForSeconds(time);
 
-        collision.gameObject.SetActive(true);
-    }
+        //collision.gameObject.SetActive(true);
+    //} 
 
 
     private int coins = 0;
@@ -42,7 +42,7 @@ public class Collectibles : MonoBehaviour
             coins++;
             CoinCounter.text = "Coins " + coins;
 
-            StartCoroutine (Respawn(collision,6));
+            //StartCoroutine (Respawn(collision,6));
 
         }
     }
