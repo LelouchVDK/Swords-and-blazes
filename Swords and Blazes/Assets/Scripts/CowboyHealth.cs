@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CowboyHealth : MonoBehaviour
 {
     public int cowboyMaxHealth = 100;
     public int cowboyCurrentHealth;
+    public TextMeshProUGUI winState;
+    public GameObject opponent;
 
     public CowboyHealthBar cowboyHealthBar;
 
@@ -26,6 +29,7 @@ public class CowboyHealth : MonoBehaviour
         if(cowboyCurrentHealth <= 0)
         {
             Destroy(gameObject);
+            winState.text = "Winner is Knight";
         }
     }
 }

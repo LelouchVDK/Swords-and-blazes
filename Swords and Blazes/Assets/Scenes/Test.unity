@@ -318,6 +318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knightMaxHealth: 100
   knightCurrentHealth: 0
+  winner: {fileID: 1175072723}
+  opponent: {fileID: 1433756994}
   knightHealthBar: {fileID: 371668524}
 --- !u!114 &108129110
 MonoBehaviour:
@@ -1835,11 +1837,6 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   cowboyFill: {fileID: 429143052}
---- !u!1 &1053172497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6690583646254122393, guid: b4706fb0893f5534e9c536f8f0af240b, type: 3}
-  m_PrefabInstance: {fileID: 939470793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1164112711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +1950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -317, y: 103}
+  m_AnchoredPosition: {x: 0, y: 103}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1175072723
@@ -2484,7 +2481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 1433756996}
-  bullet: {fileID: 1053172497}
+  bullet: {fileID: 6185136652452193833, guid: 9b92d896f1e1da5448e8058faa559a2a, type: 3}
   cowboy: {fileID: 1433756994}
   render: {fileID: 1433757003}
   offset: {x: 0, y: 0}
@@ -2621,6 +2618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cowboyMaxHealth: 100
   cowboyCurrentHealth: 0
+  winState: {fileID: 1175072723}
+  opponent: {fileID: 108129101}
   cowboyHealthBar: {fileID: 987156941}
 --- !u!114 &1433757006
 MonoBehaviour:
