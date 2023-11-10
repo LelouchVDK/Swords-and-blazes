@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System;
+using System.Linq;
+using Unity.VisualScripting;
 
 public class Shoot : MonoBehaviour
 {
@@ -37,10 +39,10 @@ public class Shoot : MonoBehaviour
     }
     void Aim(Vector2 target)
     {
-        Vector2 origin = (Vector2)transform.position + offset;
+        Vector2 origin = (Vector2) transform.position + offset;
         Vector2 dir = target - origin;
         RaycastHit2D ray = Physics2D.Raycast(origin, dir);
-        //RaycastHit2D[] hits = Physics2D.RaycastAll(origin, dir);
+        RaycastHit2D hits = Physics2D.RaycastAll(origin, dir).Where(x => x.collider.gameObject != gameObject).FirstOrDefault();
         //hits[0].collider.GetComponent<HealthBar>();
         //Debug.Log(string.Join(", ", hits));
         Vector2 end = ray.point;
