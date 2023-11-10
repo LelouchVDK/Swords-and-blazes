@@ -2484,7 +2484,7 @@ MonoBehaviour:
   bullet: {fileID: 6185136652452193833, guid: 9b92d896f1e1da5448e8058faa559a2a, type: 3}
   cowboy: {fileID: 1433756994}
   render: {fileID: 1433757003}
-  offset: {x: 0, y: 0}
+  offset: {x: 0.75, y: 0.15}
   faceDir: {fileID: 1433756998}
 --- !u!120 &1433757003
 LineRenderer:
@@ -2539,7 +2539,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.048192322
+        value: 0.048192427
         inSlope: 0
         outSlope: 0
         tangentMode: 0
