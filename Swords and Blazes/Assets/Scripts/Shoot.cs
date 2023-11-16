@@ -15,6 +15,8 @@ public class Shoot : MonoBehaviour
     public CowboyMovement faceDir;
     public KnightHealth knight;
 
+    public String colour = "FFFB1E0A";
+    String red = "interface";
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,8 @@ public class Shoot : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bullet, screen_pos, transform.rotation);
+            Instantiate(bullet, world_pos, transform.rotation);
+            Destroy(bullet);
         }
         if (!faceDir.faceLeft)
         {

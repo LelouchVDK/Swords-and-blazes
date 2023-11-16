@@ -17,7 +17,19 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DestroyObjectDelayed();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Knight")
+        {
+            KnightHealth knight = (KnightHealth)collision.gameObject.GetComponent<KnightHealth>();
+            knight.KnightTakeDamage(20);
+        }
     }
 
     void DestroyObjectDelayed()
