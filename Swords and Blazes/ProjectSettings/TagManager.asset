@@ -10,6 +10,7 @@ TagManager:
   - Knight
   - Cowboy
   - Cactus
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d067ea8ea9a32df42a466f83ad23682c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_knightMovementSpeed: 5
+  m_knightMovementSpeed: 10
   faceLeft: 0
 --- !u!70 &108129107
 CapsuleCollider2D:
@@ -2446,7 +2446,8 @@ MonoBehaviour:
   render: {fileID: 1433757003}
   offset: {x: 0.75, y: 0.15}
   faceDir: {fileID: 1433756998}
-  knight: {fileID: 0}
+  knightHealth: {fileID: 108129109}
+  knight: {fileID: 108129107}
 --- !u!120 &1433757003
 LineRenderer:
   serializedVersion: 2
@@ -3929,6 +3930,10 @@ PrefabInstance:
     - target: {fileID: 4577731715407443140, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: knightSlider
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892492274429258674, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
+      propertyPath: m_knightMovementSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5816338768025604833, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: m_Name

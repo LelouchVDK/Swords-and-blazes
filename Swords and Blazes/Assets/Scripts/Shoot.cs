@@ -13,15 +13,15 @@ public class Shoot : MonoBehaviour
     public LineRenderer render;
     public Vector2 offset;
     public CowboyMovement faceDir;
-    public KnightHealth knight;
+    public KnightHealth knightHealth;
+    public Collider2D knight;
 
-    public String colour = "FFFB1E0A";
-    String red = "interface";
+
     // Start is called before the first frame update
     void Start()
     {
-        Vector2 mouse_pos = Input.mousePosition;
-        CowboyMovement faceDir = cowboy.GetComponent<CowboyMovement>();
+        _ = Input.mousePosition;
+        _ = cowboy.GetComponent<CowboyMovement>();
     }
 
     void Update()
@@ -30,11 +30,17 @@ public class Shoot : MonoBehaviour
         Vector2 screen_pos = Input.mousePosition;
         Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
         Aim(world_pos);
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bullet, world_pos, transform.rotation);
-            Destroy(bullet);
+            
+            if (bullet.CompareTag("Bullet"))
+            {
+                bullet.SetActive(false);
+            }
+            
         }
         if (!faceDir.faceLeft)
         {
