@@ -25,7 +25,7 @@ public class KnightHealth : MonoBehaviour
 
         knightHealthBar.SetHealth(knightCurrentHealth);
 
-        if (knightCurrentHealth < 0 ) 
+        if (knightCurrentHealth <= 0 ) 
         {
             Destroy(gameObject);
             winner.text = "Winner is Cowboy";
