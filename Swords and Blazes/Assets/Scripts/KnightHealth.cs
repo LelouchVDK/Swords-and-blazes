@@ -28,7 +28,7 @@ public class KnightHealth : MonoBehaviour
         if (knightCurrentHealth <= 0 ) 
         {
             Destroy(gameObject);
-            winner.text = "Winner is Cowboy";
+            winner.text = "Winner is Cowboyb";
         }
     }
 }

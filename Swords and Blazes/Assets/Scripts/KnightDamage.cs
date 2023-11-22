@@ -6,7 +6,8 @@ public class KnightDamage : MonoBehaviour
 {
     public CowboyHealth cowboyHealth;
     public KnightHealth knightHealth;
-    // Start is called before the first frame update
+    public GameObject bullet;
+    
     
     
 
@@ -22,7 +23,12 @@ public class KnightDamage : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            print("Hello there");
             knightHealth.KnightTakeDamage(20);
+            Vector2 screen_pos = Input.mousePosition;
+            Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
+            // Coroutine shoot = StartCoroutine(Shoot.DelayDamage(Shoot.Instantiate(bullet, world_pos, Quaternion.identity)));
+            
         }
     }
 }

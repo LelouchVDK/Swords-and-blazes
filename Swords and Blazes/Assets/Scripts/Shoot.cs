@@ -23,7 +23,7 @@ public class Shoot : MonoBehaviour
         _ = Input.mousePosition;
         _ = cowboy.GetComponent<CowboyMovement>();
     }
-
+    
     void Update()
     {
 
@@ -31,15 +31,13 @@ public class Shoot : MonoBehaviour
         Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
         Aim(world_pos);
         
-
+        /// Creates a bullet when pressing Space button
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bullet, world_pos, transform.rotation);
+
             
-            if (bullet.CompareTag("Bullet"))
-            {
-                bullet.SetActive(false);
-            }
+            
             
         }
         if (!faceDir.faceLeft)
@@ -48,6 +46,25 @@ public class Shoot : MonoBehaviour
         }
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        Debug.Log("Hits Target");
+        if (collision.transform.CompareTag("Knight"))
+        {
+            knightHealth.KnightTakeDamage(20);
+        }
+    }
+
+    public IEnumerator DelayDamage(GameObject newbullet)
+    {
+        yield return new WaitForSeconds(5);
+        newbullet.SetActive(false);
+    }
+    /// <summary>
+    /// Aims with the white line at thingies
+    /// </summary>
+    /// <param name="target"> Thingie to aim at</param>
     void Aim(Vector2 target)
     {
         Vector2 origin = (Vector2) transform.position + offset;
