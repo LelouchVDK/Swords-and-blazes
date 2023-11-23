@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    GameObject bullet;
+    public GameObject bullet;
+    public Shoot shoot;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Shoot.DelayDamage(bullet));
+        StartCoroutine(shoot.DelayDamage(bullet));
     }
 
     
