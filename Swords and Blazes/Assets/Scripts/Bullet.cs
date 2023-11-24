@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Bullet that does damage to the Knight when shot
+/// </summary>
 public class Bullet : MonoBehaviour
 {
     public GameObject bullet;
