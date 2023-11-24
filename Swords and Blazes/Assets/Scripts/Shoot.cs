@@ -34,7 +34,8 @@ public class Shoot : MonoBehaviour
         /// Creates a bullet when pressing Space button
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bullet, world_pos, transform.rotation);  
+            Instantiate(bullet, world_pos, transform.rotation);
+            cowboy.GetComponent<Rigidbody2D>().AddForce(-20*world_pos);
         }
         if (!faceDir.faceLeft)
         {
@@ -56,9 +57,12 @@ public class Shoot : MonoBehaviour
     /// Aims with the white line at thingies
     /// </summary>
     /// <param name="target"> Thingie to aim at</param>
+    
     void Aim(Vector2 target)
     {
+        //Starting position
         Vector2 origin = (Vector2) transform.position + offset;
+        //Direction position
         Vector2 dir = target - origin;
         RaycastHit2D ray = Physics2D.Raycast(origin, dir);
         RaycastHit2D hits = Physics2D.RaycastAll(origin, dir).Where(x => x.collider.gameObject != gameObject).FirstOrDefault();
