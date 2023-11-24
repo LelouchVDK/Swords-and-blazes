@@ -6,11 +6,26 @@ public class Bullet : MonoBehaviour
 {
     public GameObject bullet;
     public Shoot shoot;
-    // Start is called before the first frame update
-    void Start()
+
+    /// <summary>
+    /// Waits a while before making bullet disappear
+    /// </summary>
+    public IEnumerator DelayDamage()
     {
-        StartCoroutine(shoot.DelayDamage(bullet));
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
+    }
+    // Start is called before the first frame update
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Knight"))
+        {
+            KnightHealth knightHealth = collision.gameObject.GetComponent<KnightHealth>();
+            knightHealth.KnightTakeDamage(20);
+            StartCoroutine(DelayDamage());
+        }
     }
 
-    
+
 }

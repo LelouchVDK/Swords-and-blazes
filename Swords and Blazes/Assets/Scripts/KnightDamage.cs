@@ -7,9 +7,12 @@ public class KnightDamage : MonoBehaviour
     public CowboyHealth cowboyHealth;
     public KnightHealth knightHealth;
     public GameObject bullet;
-    
-    
-    
+    public Shoot shoot;
+
+    private Shoot GetShoot()
+    {
+        return shoot;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -21,14 +24,6 @@ public class KnightDamage : MonoBehaviour
         {
             knightHealth.KnightTakeDamage(10);
         }
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            print("Hello there");
-            knightHealth.KnightTakeDamage(20);
-            Vector2 screen_pos = Input.mousePosition;
-            Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
-            // Coroutine shoot = StartCoroutine(Shoot.DelayDamage(Shoot.Instantiate(bullet, world_pos, Quaternion.identity)));
-            
-        }
+        
     }
 }

@@ -34,11 +34,7 @@ public class Shoot : MonoBehaviour
         /// Creates a bullet when pressing Space button
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bullet, world_pos, transform.rotation);
-
-            
-            
-            
+            Instantiate(bullet, world_pos, transform.rotation);  
         }
         if (!faceDir.faceLeft)
         {
@@ -55,7 +51,11 @@ public class Shoot : MonoBehaviour
             knightHealth.KnightTakeDamage(20);
         }
     }
-
+    /// <summary>
+    /// Waits a while before making bullet disappear
+    /// </summary>
+    /// <param name="newbullet">Current bullet</param>
+    /// <returns></returns>
     public IEnumerator DelayDamage(GameObject newbullet)
     {
         yield return new WaitForSeconds(5);

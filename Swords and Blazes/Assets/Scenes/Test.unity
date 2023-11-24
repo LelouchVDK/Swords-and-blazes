@@ -410,6 +410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cowboyHealth: {fileID: 1433757005}
   knightHealth: {fileID: 108129109}
+  bullet: {fileID: 0}
+  shoot: {fileID: 1433757002}
 --- !u!114 &108129111
 MonoBehaviour:
   m_ObjectHideFlags: 0
