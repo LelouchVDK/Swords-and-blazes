@@ -21,7 +21,9 @@ public class KnightMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftControl))
+
+        // The Knight attacks using the spacebar.
+        if (Input.GetKey(KeyCode.Space))
         {
             knightAnimator.SetBool("Slash", true);
             Debug.Log("I'm Slashing!!!");
