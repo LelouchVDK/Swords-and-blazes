@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// How Knight does or takes damage. 
+/// Takes damage when hit by a cactus.
+/// Does damage when colliding
+/// </summary>
 public class KnightDamage : MonoBehaviour
 {
     public CowboyHealth cowboyHealth;

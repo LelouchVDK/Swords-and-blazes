@@ -7,15 +7,12 @@ public class Bullet : MonoBehaviour
     public GameObject bullet;
     public Shoot shoot;
 
-    /// <summary>
-    /// Waits a while before making bullet disappear
-    /// </summary>
-    public IEnumerator DelayDamage()
-    {
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
-    }
+
     // Start is called before the first frame update
+    private void Start()
+    {
+        Destroy(gameObject, 0.5f);
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -23,8 +20,9 @@ public class Bullet : MonoBehaviour
         {
             KnightHealth knightHealth = collision.gameObject.GetComponent<KnightHealth>();
             knightHealth.KnightTakeDamage(20);
-            StartCoroutine(DelayDamage());
+            
         }
+        Destroy(gameObject, 0.5f);
     }
 
 
