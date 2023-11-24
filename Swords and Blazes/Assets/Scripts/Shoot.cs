@@ -51,16 +51,7 @@ public class Shoot : MonoBehaviour
             knightHealth.KnightTakeDamage(20);
         }
     }
-    /// <summary>
-    /// Waits a while before making bullet disappear
-    /// </summary>
-    /// <param name="newbullet">Current bullet</param>
-    /// <returns></returns>
-    public IEnumerator DelayDamage(GameObject newbullet)
-    {
-        yield return new WaitForSeconds(5);
-        newbullet.SetActive(false);
-    }
+    
     /// <summary>
     /// Aims with the white line at thingies
     /// </summary>

@@ -7,12 +7,7 @@ public class KnightDamage : MonoBehaviour
     public CowboyHealth cowboyHealth;
     public KnightHealth knightHealth;
     public GameObject bullet;
-    public Shoot shoot;
-
-    private Shoot GetShoot()
-    {
-        return shoot;
-    }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
