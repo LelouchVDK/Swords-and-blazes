@@ -2209,6 +2209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: knight_placeholder
       objectReference: {fileID: 0}
+    - target: {fileID: 5074667399308264125, guid: 8631312a61ff97e4182728e137d5a739, type: 3}
+      propertyPath: m_knightMovementSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5269166516575102771, guid: 8631312a61ff97e4182728e137d5a739, type: 3}
       propertyPath: CoinCounter
       value: 

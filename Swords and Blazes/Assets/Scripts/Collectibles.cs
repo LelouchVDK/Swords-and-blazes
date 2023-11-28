@@ -7,11 +7,12 @@ public class Collectibles : MonoBehaviour
 {
 
     private System.Random rand = new System.Random();
+    SpawnCoin spawner;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        spawner = GameObject.Find("CoinSpawner").GetComponent<SpawnCoin>();
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class Collectibles : MonoBehaviour
             CoinCounter.text = "Coins " + coins;
 
             //StartCoroutine (Respawn(collision,6));
+            spawner.SpawnCoins();
 
         }
     }
