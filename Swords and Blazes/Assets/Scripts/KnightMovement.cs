@@ -26,7 +26,6 @@ public class KnightMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             knightAnimator.SetBool("Slash", true);
-            Debug.Log("I'm Slashing!!!");
             
         }
         else

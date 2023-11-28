@@ -539,7 +539,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdd57b78462ced4db950ac383b5f0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cowboyHealth: {fileID: 0}
+  cowboyHealth: {fileID: 1433757005}
 --- !u!1 &233904305
 GameObject:
   m_ObjectHideFlags: 0
