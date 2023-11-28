@@ -26,10 +26,12 @@ public class CowboyHealth : MonoBehaviour
 
         cowboyHealthBar.SetHealth(cowboyCurrentHealth);
 
-        if(cowboyCurrentHealth <= 0)
+        
+        if (cowboyCurrentHealth <= 0)
         {
             Destroy(gameObject);
             winState.text = "Winner is Knight";
+            Application.Quit();
         }
     }
 }
