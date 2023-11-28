@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d067ea8ea9a32df42a466f83ad23682c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_knightMovementSpeed: 10
+  m_knightMovementSpeed: 20
   faceLeft: 0
 --- !u!70 &108129107
 CapsuleCollider2D:
@@ -488,13 +488,13 @@ GameObject:
   - component: {fileID: 211628236}
   - component: {fileID: 211628237}
   - component: {fileID: 211628238}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &211628236
 Transform:
   m_ObjectHideFlags: 0
@@ -554,11 +554,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.864645, y: 0.73551124}
-      - {x: -1.916441, y: -0.31253174}
-      - {x: -1.1828847, y: -1.0470569}
-      - {x: -1.1842903, y: -0.028775066}
-      - {x: -0.8210182, y: 1.0892591}
+    - - {x: -0.8981557, y: 0.14378321}
+      - {x: -0.811882, y: -0.3519803}
+      - {x: -0.29529285, y: -0.57367444}
+      - {x: -0.5531138, y: -0.08794787}
+      - {x: -0.28846312, y: 0.6158769}
   m_UseDelaunayMesh: 0
 --- !u!114 &211628238
 MonoBehaviour:
@@ -573,6 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cowboyHealth: {fileID: 1433757005}
+  knightAnimator: {fileID: 108129112}
 --- !u!1 &233904305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2362,7 @@ GameObject:
   - component: {fileID: 1433757000}
   - component: {fileID: 1433757002}
   - component: {fileID: 1433757003}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cowboy_placeholder
   m_TagString: Cowboy
   m_Icon: {fileID: 0}
@@ -2542,7 +2543,7 @@ MonoBehaviour:
   bullet: {fileID: 6185136652452193833, guid: 9b92d896f1e1da5448e8058faa559a2a, type: 3}
   cowboy: {fileID: 1433756994}
   render: {fileID: 1433757003}
-  offset: {x: 0.75, y: 0.15}
+  offsetLeft: {x: -0.75, y: 0.15}
   faceDir: {fileID: 1433756998}
   knightHealth: {fileID: 108129109}
   knight: {fileID: 108129107}
@@ -4031,7 +4032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4892492274429258674, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: m_knightMovementSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5816338768025604833, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: m_Name

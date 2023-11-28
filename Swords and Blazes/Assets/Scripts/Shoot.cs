@@ -11,7 +11,9 @@ public class Shoot : MonoBehaviour
     public GameObject bullet;
     public GameObject cowboy;
     public LineRenderer render;
-    public Vector2 offset;
+    public Vector2 offsetLeft;
+    private Vector2 offsetRight => -offsetLeft;
+    private Vector2 currentOffset;
     public CowboyMovement faceDir;
     public KnightHealth knightHealth;
     public Collider2D knight;
@@ -54,7 +56,7 @@ public class Shoot : MonoBehaviour
     void Shooter(Vector2 target)
     {
         //Starting position
-        Vector2 origin = (Vector2) transform.position + offset;
+        Vector2 origin = (Vector2) transform.position + currentOffset;
         //Direction position
         Vector2 dir = target - origin;
         RaycastHit2D ray = Physics2D.Raycast(origin, dir);
@@ -67,9 +69,6 @@ public class Shoot : MonoBehaviour
             Instantiate(bullet, end, transform.rotation);
             cowboy.GetComponent<Rigidbody2D>().AddForce(-20 * origin);
         }
-        if (!faceDir.faceLeft)
-        {
-            offset = -offset;
-        }
+        currentOffset = faceDir.faceLeft ? offsetLeft : offsetRight;
     }
 }

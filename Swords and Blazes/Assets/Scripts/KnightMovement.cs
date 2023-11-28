@@ -10,7 +10,9 @@ public class KnightMovement : MonoBehaviour
     public float m_knightMovementSpeed;
     [HideInInspector] public bool faceLeft;
     private Animator knightAnimator;
-    
+
+    public delegate void HitAction();
+    public event HitAction OnHitAction;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +25,13 @@ public class KnightMovement : MonoBehaviour
     {
 
         // The Knight attacks using the spacebar.
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             knightAnimator.SetBool("Slash", true);
+            OnHitAction?.Invoke();
             
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.Space))
         {
             knightAnimator.SetBool("Slash", false);
         }

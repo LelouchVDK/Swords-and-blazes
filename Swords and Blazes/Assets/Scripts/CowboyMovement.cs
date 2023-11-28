@@ -22,7 +22,7 @@ public class CowboyMovement : MonoBehaviour
     {     
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Vector2 right = new Vector2(m_cowboyMovementSpeed, 0);
+            Vector2 right = new (m_cowboyMovementSpeed, 0);
             rb.AddForce(right);
             transform.localScale = new Vector3(-1, 1, 1);
             faceLeft = false;
@@ -33,7 +33,7 @@ public class CowboyMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Vector2 left = new Vector2(-m_cowboyMovementSpeed, 0);
+            Vector2 left = new(-m_cowboyMovementSpeed, 0);
             rb.AddForce(left);
             transform.localScale = new Vector3(1, 1, 1);
             faceLeft = true;
@@ -44,13 +44,13 @@ public class CowboyMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            Vector2 up = new Vector2(0, m_cowboyMovementSpeed);
+            Vector2 up = new(0, m_cowboyMovementSpeed);
             rb.AddForce(up);
         }
                 
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Vector2 down = new Vector2(0, -m_cowboyMovementSpeed);
+            Vector2 down = new(0, -m_cowboyMovementSpeed);
             rb.AddForce(down);
         }
     }
