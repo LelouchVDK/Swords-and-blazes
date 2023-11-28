@@ -6,14 +6,10 @@ public class KnightSlash : MonoBehaviour
 {
     public CowboyHealth cowboyHealth;
 
-    private void Start()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Cowboy")
+        if (other.gameObject.CompareTag("Cowboy"))
         {
             cowboyHealth.CowboyTakeDamage(10);
             Debug.Log("*IMPACT!*");

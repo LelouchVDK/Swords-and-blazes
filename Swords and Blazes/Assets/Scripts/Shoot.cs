@@ -46,7 +46,8 @@ public class Shoot : MonoBehaviour
     }
     
     /// <summary>
-    /// Aims with the white line at thingies
+    /// Aims with the white line at thingies and uses an if statement to instantiate a bullet
+    /// at the end of a line.
     /// </summary>
     /// <param name="target"> Thingie to aim at</param>
     

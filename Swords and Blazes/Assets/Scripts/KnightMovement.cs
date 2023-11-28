@@ -41,7 +41,7 @@ public class KnightMovement : MonoBehaviour
     {     
             if (Input.GetKey(KeyCode.D))
             {
-                Vector2 right = new Vector2(m_knightMovementSpeed, 0);
+                Vector2 right = new(m_knightMovementSpeed, 0);
                 rb.AddForce(right);
                 transform.localScale = new Vector3(-1, 1, 1);
                 faceLeft = false;
@@ -54,7 +54,7 @@ public class KnightMovement : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A))
             {
-                Vector2 left = new Vector2(-m_knightMovementSpeed, 0);
+                Vector2 left = new(-m_knightMovementSpeed, 0);
                 rb.AddForce(left);
                 transform.localScale = new Vector3(1, 1, 1);
                 faceLeft = true;
@@ -66,14 +66,14 @@ public class KnightMovement : MonoBehaviour
                 
             if (Input.GetKey(KeyCode.W))
             {
-                Vector2 up = new Vector2(0, m_knightMovementSpeed);
+                Vector2 up = new(0, m_knightMovementSpeed);
                 rb.AddForce(up);
                 
             }
                 
             if (Input.GetKey(KeyCode.S))
             {
-                Vector2 down = new Vector2(0, -m_knightMovementSpeed);
+                Vector2 down = new(0, -m_knightMovementSpeed);
                 rb.AddForce(down);
                 
             }
