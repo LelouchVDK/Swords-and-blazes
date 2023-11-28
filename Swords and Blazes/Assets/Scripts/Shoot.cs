@@ -12,7 +12,7 @@ public class Shoot : MonoBehaviour
     public GameObject cowboy;
     public LineRenderer render;
     public Vector2 offsetLeft;
-    private Vector2 offsetRight => -offsetLeft;
+    private Vector2 OffsetRight => -offsetLeft;
     private Vector2 currentOffset;
     public CowboyMovement faceDir;
     public KnightHealth knightHealth;
@@ -69,6 +69,6 @@ public class Shoot : MonoBehaviour
             Instantiate(bullet, end, transform.rotation);
             cowboy.GetComponent<Rigidbody2D>().AddForce(-20 * origin);
         }
-        currentOffset = faceDir.faceLeft ? offsetLeft : offsetRight;
+        currentOffset = faceDir.faceLeft ? offsetLeft : OffsetRight;
     }
 }
