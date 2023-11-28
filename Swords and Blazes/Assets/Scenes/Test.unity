@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d067ea8ea9a32df42a466f83ad23682c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_knightMovementSpeed: 10
+  m_knightMovementSpeed: 20
   faceLeft: 0
 --- !u!70 &108129107
 CapsuleCollider2D:
@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faceLeft: 0
-  m_cowboyMovementSpeed: 10
+  m_cowboyMovementSpeed: 20
 --- !u!70 &1433756999
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4031,7 +4031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4892492274429258674, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: m_knightMovementSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5816338768025604833, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: m_Name
