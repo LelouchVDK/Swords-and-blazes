@@ -80,19 +80,5 @@ public class KnightMovement : MonoBehaviour
             }
 
 
-
-        /* if (faceLeft && m_knightMovementSpeed < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-            faceLeft = true;
-        }
-
-        if (!faceLeft && m_knightMovementSpeed > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-            faceLeft = false;
-        }*/
-
-
     }
 }

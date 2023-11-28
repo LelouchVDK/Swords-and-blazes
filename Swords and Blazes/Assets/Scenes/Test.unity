@@ -487,13 +487,14 @@ GameObject:
   m_Component:
   - component: {fileID: 211628236}
   - component: {fileID: 211628237}
+  - component: {fileID: 211628238}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &211628236
 Transform:
   m_ObjectHideFlags: 0
@@ -559,6 +560,19 @@ PolygonCollider2D:
       - {x: -1.1842903, y: -0.028775066}
       - {x: -0.8210182, y: 1.0892591}
   m_UseDelaunayMesh: 0
+--- !u!114 &211628238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211628235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebdd57b78462ced4db950ac383b5f0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowboyHealth: {fileID: 0}
 --- !u!1 &233904305
 GameObject:
   m_ObjectHideFlags: 0
