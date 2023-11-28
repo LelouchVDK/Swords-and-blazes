@@ -43,7 +43,7 @@ public class Shoot : MonoBehaviour
         
         if (collision.transform.CompareTag("Knight"))
         {
-            knightHealth.KnightTakeDamage(20);
+            knightHealth.KnightTakeDamage(5);
         }
     }
     

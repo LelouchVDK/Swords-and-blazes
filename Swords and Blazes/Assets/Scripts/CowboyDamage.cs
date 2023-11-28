@@ -15,7 +15,7 @@ public class CowboyDamage : MonoBehaviour
     {
 
         // If this object collides with an object with the tag "Cactus", this object takes damage.
-        if (collision.gameObject.CompareTag("Cactus"))
+        if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("Knight"))
         {
             cowboyHealth.CowboyTakeDamage(10);
         }

@@ -18,7 +18,7 @@ public class KnightSlash : MonoBehaviour
     {
         if(cowboyInRange)
         {
-            cowboyHealth.CowboyTakeDamage(10);
+            cowboyHealth.CowboyTakeDamage(20);
         }
     }
 
