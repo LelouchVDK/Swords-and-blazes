@@ -14,12 +14,6 @@ public class CowboyDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        // If this object collides with another object with the tag "Knight", that object takes damage.
-        if (collision.gameObject.CompareTag("Knight"))
-        {
-            knightHealth.KnightTakeDamage(10);
-        }
-
         // If this object collides with an object with the tag "Cactus", this object takes damage.
         if (collision.gameObject.CompareTag("Cactus"))
         {

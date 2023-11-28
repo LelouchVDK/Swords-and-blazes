@@ -16,10 +16,6 @@ public class KnightDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Cowboy"))
-        {
-            cowboyHealth.CowboyTakeDamage(10);
-        }
         if (collision.gameObject.CompareTag("Cactus"))
         {
             knightHealth.KnightTakeDamage(10);
