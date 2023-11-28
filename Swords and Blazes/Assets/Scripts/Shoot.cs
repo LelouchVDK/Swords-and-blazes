@@ -29,24 +29,16 @@ public class Shoot : MonoBehaviour
 
         Vector2 screen_pos = Input.mousePosition;
         Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
-        Aim(world_pos);
+        Shooter(world_pos);
         
-        /// Creates a bullet when pressing Space button
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Instantiate(bullet, world_pos, transform.rotation);
-            cowboy.GetComponent<Rigidbody2D>().AddForce(-20*world_pos);
-        }
-        if (!faceDir.faceLeft)
-        {
-            offset = -offset;
-        }
+        /// Creates a bullet when pressing Mouse button
+        
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        Debug.Log("Hits Target");
+        
         if (collision.transform.CompareTag("Knight"))
         {
             knightHealth.KnightTakeDamage(20);
@@ -58,7 +50,7 @@ public class Shoot : MonoBehaviour
     /// </summary>
     /// <param name="target"> Thingie to aim at</param>
     
-    void Aim(Vector2 target)
+    void Shooter(Vector2 target)
     {
         //Starting position
         Vector2 origin = (Vector2) transform.position + offset;
@@ -69,5 +61,14 @@ public class Shoot : MonoBehaviour
         Vector2 end = ray.point;
         render.SetPosition(0, origin);
         render.SetPosition(1, end);
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(bullet, end, transform.rotation);
+            cowboy.GetComponent<Rigidbody2D>().AddForce(-20 * origin);
+        }
+        if (!faceDir.faceLeft)
+        {
+            offset = -offset;
+        }
     }
 }
