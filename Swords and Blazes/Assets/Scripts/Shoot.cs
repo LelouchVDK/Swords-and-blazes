@@ -18,6 +18,8 @@ public class Shoot : MonoBehaviour
     public CowboyMovement faceDir;
     public KnightHealth knightHealth;
     public Collider2D knight;
+    public Transform bulletMover;
+
 
 
     // Start is called before the first frame update
@@ -65,9 +67,12 @@ public class Shoot : MonoBehaviour
         Vector2 end = ray.point;
         render.SetPosition(0, origin);
         render.SetPosition(1, end);
+        
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(bullet, end, transform.rotation);
+            Instantiate(bullet, origin, transform.rotation);
+            bulletMover = bullet.GetComponent<Transform>();
+            bulletMover.Translate(dir);
             cowboy.GetComponent<Rigidbody2D>().AddForce(-knockback * dir);
         }
         currentOffset = faceDir.faceLeft ? offsetLeft : OffsetRight;
