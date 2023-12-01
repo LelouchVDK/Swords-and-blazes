@@ -45,10 +45,7 @@ public class Collectibles : MonoBehaviour
             coins++;
             CoinCounter.text = "Coins " + coins;
 
-            if (coins == 5)
-            {
-                winnerText.text = "Winner is " + winner.tag;
-            }
+            if (coins == 5) winnerText.text = "Winner is " + winner.tag;
 
             //StartCoroutine (Respawn(collision,6));
             spawner.SpawnCoins();
