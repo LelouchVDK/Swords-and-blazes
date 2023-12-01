@@ -12,6 +12,7 @@ public class Shoot : MonoBehaviour
     public GameObject cowboy;
     public LineRenderer render;
     public Vector2 offsetLeft;
+    public int knockback;
     private Vector2 OffsetRight => -offsetLeft;
     private Vector2 currentOffset;
     public CowboyMovement faceDir;
@@ -67,7 +68,7 @@ public class Shoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(bullet, end, transform.rotation);
-            cowboy.GetComponent<Rigidbody2D>().AddForce(-20 * origin);
+            cowboy.GetComponent<Rigidbody2D>().AddForce(-knockback * dir);
         }
         currentOffset = faceDir.faceLeft ? offsetLeft : OffsetRight;
     }
