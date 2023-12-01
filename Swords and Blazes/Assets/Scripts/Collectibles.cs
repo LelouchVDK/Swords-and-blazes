@@ -47,7 +47,7 @@ public class Collectibles : MonoBehaviour
 
             if (coins == 5)
             {
-                winnerText.text = "Winner is " + winner.name;
+                winnerText.text = "Winner is " + winner.tag;
             }
 
             //StartCoroutine (Respawn(collision,6));
