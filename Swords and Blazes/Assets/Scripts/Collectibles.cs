@@ -50,6 +50,7 @@ public class Collectibles : MonoBehaviour
             //StartCoroutine (Respawn(collision,6));
             spawner.SpawnCoins();
 
+            
         }
     }
 
