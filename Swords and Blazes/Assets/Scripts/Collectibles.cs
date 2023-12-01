@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Collectibles : MonoBehaviour
 {
 
-    private System.Random rand = new System.Random();
     SpawnCoin spawner;
+    public TextMeshProUGUI winnerText;
+    public GameObject winner;
+    
+    
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +20,7 @@ public class Collectibles : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 
     //IEnumerator Respawn (Collider2D collision, int time)
     //{
@@ -39,9 +40,15 @@ public class Collectibles : MonoBehaviour
 
             collision.gameObject.SetActive(false);
             
+            
             //Destroy(collision.gameObject);//
             coins++;
             CoinCounter.text = "Coins " + coins;
+
+            if (coins == 5)
+            {
+                winnerText.text = "Winner is " + winner.name;
+            }
 
             //StartCoroutine (Respawn(collision,6));
             spawner.SpawnCoins();

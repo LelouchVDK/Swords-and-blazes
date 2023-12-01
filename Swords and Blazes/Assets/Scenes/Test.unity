@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 108129108}
   - component: {fileID: 108129112}
   m_Layer: 0
-  m_Name: knight_placeholder
+  m_Name: knight
   m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,6 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb62980b2a3e5604599a84ff4ed7f942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winnerText: {fileID: 1175072723}
+  winner: {fileID: 108129101}
   CoinCounter: {fileID: 540135297}
 --- !u!114 &108129109
 MonoBehaviour:
@@ -2150,7 +2152,7 @@ GameObject:
   - component: {fileID: 1433757002}
   - component: {fileID: 1433757003}
   m_Layer: 2
-  m_Name: cowboy_placeholder
+  m_Name: cowboy
   m_TagString: Cowboy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2313,6 +2315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb62980b2a3e5604599a84ff4ed7f942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winnerText: {fileID: 1175072723}
+  winner: {fileID: 1433756994}
   CoinCounter: {fileID: 1743984105}
 --- !u!114 &1433757002
 MonoBehaviour:
@@ -3675,7 +3679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5816338768025604833, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: m_Name
-      value: knight_placeholder
+      value: knight
       objectReference: {fileID: 0}
     - target: {fileID: 7127267193172994829, guid: fcd5be89a30b4fb48bb84f096fee372e, type: 3}
       propertyPath: cowboyHealth
