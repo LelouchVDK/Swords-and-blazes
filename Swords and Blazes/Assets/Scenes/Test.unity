@@ -2266,7 +2266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2aab653178d43d47a4bbb113eb972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceLeft: 0
   m_cowboyMovementSpeed: 20
 --- !u!70 &1433756999
 CapsuleCollider2D:
@@ -2331,15 +2330,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 1433756996}
-  bullet: {fileID: 6185136652452193833, guid: 9b92d896f1e1da5448e8058faa559a2a, type: 3}
+  bulletPrefab: {fileID: 6185136652452193833, guid: 9b92d896f1e1da5448e8058faa559a2a, type: 3}
   cowboy: {fileID: 1433756994}
   render: {fileID: 1433757003}
-  offsetLeft: {x: 1, y: 0.15}
+  offsetLeft: {x: -1, y: 0.15}
   knockback: 100
   faceDir: {fileID: 1433756998}
   knightHealth: {fileID: 108129109}
   knight: {fileID: 108129107}
-  bulletMover: {fileID: 0}
+  bulletSpeed: 100
 --- !u!120 &1433757003
 LineRenderer:
   serializedVersion: 2

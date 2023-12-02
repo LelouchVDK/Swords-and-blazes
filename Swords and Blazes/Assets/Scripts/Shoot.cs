@@ -8,18 +8,19 @@ using Unity.VisualScripting;
 public class Shoot : MonoBehaviour
 {
     public Transform shootingPoint;
-    public GameObject bullet;
+    public GameObject bulletPrefab;
     public GameObject cowboy;
     public LineRenderer render;
     public Vector2 offsetLeft;
     public int knockback;
-    private Vector2 OffsetRight => -offsetLeft;
+    private Vector2 OffsetRight => new(-offsetLeft.x, offsetLeft.y);
     private Vector2 currentOffset;
-    public CowboyMovement faceDir;
+    // public CowboyMovement faceDir;
     public KnightHealth knightHealth;
     public Collider2D knight;
-    public Transform bulletMover;
-
+    // public Transform bulletMover;
+    public int bulletSpeed;
+    public bool FaceLeft { get; private set; } = true;
 
 
     // Start is called before the first frame update
@@ -35,10 +36,21 @@ public class Shoot : MonoBehaviour
         Vector2 screen_pos = Input.mousePosition;
         Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
         Shooter(world_pos);
-        
-        /// Creates a bullet when pressing Mouse button
-        
-        
+
+        if (world_pos.x < transform.position.x)
+        {
+            FaceLeft = true;
+            transform.localScale = new(1, 1, 1);
+        }
+        else
+        {
+            FaceLeft = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+
+
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -70,11 +82,13 @@ public class Shoot : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(bullet, origin, transform.rotation);
-            bulletMover = bullet.GetComponent<Transform>();
-            bulletMover.Translate(dir);
-            cowboy.GetComponent<Rigidbody2D>().AddForce(-knockback * dir);
+            GameObject bullet = Instantiate(bulletPrefab, origin, transform.rotation);
+            // bulletMover = bullet.GetComponent<Transform>();
+            Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
+            rbBullet.velocity = dir.normalized * bulletSpeed;
+            // bulletPrefab.transform.Translate(end);
+            cowboy.GetComponent<Rigidbody2D>().AddForce(-knockback * dir.normalized);
         }
-        currentOffset = faceDir.faceLeft ? offsetLeft : OffsetRight;
+        currentOffset = FaceLeft ? offsetLeft : OffsetRight;
     }
 }

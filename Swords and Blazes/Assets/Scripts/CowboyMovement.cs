@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class CowboyMovement : MonoBehaviour
 {
-    [HideInInspector] public bool faceLeft;
+    // public bool FaceLeft { get; private set; } = true;
     
 
     Rigidbody2D rb;
@@ -24,8 +25,8 @@ public class CowboyMovement : MonoBehaviour
         {
             Vector2 right = new (m_cowboyMovementSpeed, 0);
             rb.AddForce(right);
-            transform.localScale = new Vector3(-1, 1, 1);
-            faceLeft = false;
+            //transform.localScale = new Vector3(-1, 1, 1);
+            //FaceLeft = false;
 
         }
             
@@ -35,8 +36,8 @@ public class CowboyMovement : MonoBehaviour
         {
             Vector2 left = new(-m_cowboyMovementSpeed, 0);
             rb.AddForce(left);
-            transform.localScale = new Vector3(1, 1, 1);
-            faceLeft = true;
+            //transform.localScale = new Vector3(1, 1, 1);
+            //FaceLeft = true;
         }
 
         
