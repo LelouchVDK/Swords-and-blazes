@@ -20,6 +20,7 @@ public class Shoot : MonoBehaviour
     public Collider2D knight;
     // public Transform bulletMover;
     public int bulletSpeed;
+    public int bulletDamage;
     public bool FaceLeft { get; private set; } = true;
 
 
@@ -58,7 +59,7 @@ public class Shoot : MonoBehaviour
         
         if (collision.transform.CompareTag("Knight"))
         {
-            knightHealth.KnightTakeDamage(5);
+            knightHealth.KnightTakeDamage(bulletDamage);
         }
     }
     
