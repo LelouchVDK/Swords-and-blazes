@@ -9,12 +9,14 @@ public class KnightHealth : MonoBehaviour
     public int knightCurrentHealth;
     public TextMeshProUGUI winner;
     public GameObject opponent;
+    public Rigidbody2D opponentRB;
 
     public KnightHealthBar knightHealthBar;
     public GameObject gameOverMenu;
     // Start is called before the first frame update
     void Start()
     {
+        opponentRB = GetComponent<Rigidbody2D>();
         knightCurrentHealth = knightMaxHealth;
         knightHealthBar.SetMaxHealth(knightMaxHealth);
     }
@@ -31,7 +33,9 @@ public class KnightHealth : MonoBehaviour
         {
             Destroy(gameObject);
             winner.text = "Winner is Cowboy";
+            
             gameOverMenu.SetActive(true);
+            opponentRB.constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
 }

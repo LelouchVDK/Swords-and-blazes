@@ -144,6 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a60060e6d6de184d9a1b241af300d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &108129116 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5345447508738943620, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+  m_PrefabInstance: {fileID: 9172296059595569619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413128987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae238c409cbb70d4099d07d4dc8edc87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1433757013 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4195666933285046956, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+  m_PrefabInstance: {fileID: 7283339108487942725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1661126650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2496,6 +2506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4195666933285046956, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4201422176739816876, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: winnerText
       value: 
@@ -2504,6 +2518,10 @@ PrefabInstance:
       propertyPath: CoinCounter
       value: 
       objectReference: {fileID: 1743984105}
+    - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: self
+      value: 
+      objectReference: {fileID: 108129116}
     - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: opponent
       value: 
@@ -2676,6 +2694,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1433757005}
     - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+      propertyPath: self
+      value: 
+      objectReference: {fileID: 108129116}
+    - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: winner
       value: 
       objectReference: {fileID: 1175072723}
@@ -2683,6 +2705,10 @@ PrefabInstance:
       propertyPath: opponent
       value: 
       objectReference: {fileID: 1433756994}
+    - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+      propertyPath: opponentRB
+      value: 
+      objectReference: {fileID: 1433757013}
     - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: gameOverMenu
       value: 
