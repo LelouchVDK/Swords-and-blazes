@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Buttonhandler : MonoBehaviour
 {
+    
+
+    public void Quitter()
+    {
+        Application.Quit();
+    }
     public void SceneHandler(string scene)
     {
         SceneManager.LoadScene(scene);

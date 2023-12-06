@@ -11,7 +11,7 @@ public class KnightHealth : MonoBehaviour
     public GameObject opponent;
 
     public KnightHealthBar knightHealthBar;
-
+    public GameObject gameOverMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,7 @@ public class KnightHealth : MonoBehaviour
         {
             Destroy(gameObject);
             winner.text = "Winner is Cowboy";
-            Application.Quit();
+            gameOverMenu.SetActive(true);
         }
     }
 }

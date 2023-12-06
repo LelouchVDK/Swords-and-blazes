@@ -11,6 +11,7 @@ public class CowboyHealth : MonoBehaviour
     public GameObject opponent;
 
     public CowboyHealthBar cowboyHealthBar;
+    public GameObject gameOverMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class CowboyHealth : MonoBehaviour
         cowboyHealthBar.SetMaxHealth(cowboyMaxHealth);
     }
 
-
+    
     public void CowboyTakeDamage(int amount)
     {
         cowboyCurrentHealth -= amount;
@@ -31,7 +32,7 @@ public class CowboyHealth : MonoBehaviour
         {
             Destroy(gameObject);
             winState.text = "Winner is Knight";
-            Application.Quit();
+            gameOverMenu.SetActive(true);
         }
     }
 }
