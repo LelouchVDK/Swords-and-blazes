@@ -2518,6 +2518,10 @@ PrefabInstance:
       propertyPath: CoinCounter
       value: 
       objectReference: {fileID: 1743984105}
+    - target: {fileID: 4201422176739816876, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: GameOverMenu
+      value: 
+      objectReference: {fileID: 1155837139}
     - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: self
       value: 
@@ -2721,6 +2725,10 @@ PrefabInstance:
       propertyPath: CoinCounter
       value: 
       objectReference: {fileID: 540135297}
+    - target: {fileID: 8822693432903015273, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+      propertyPath: GameOverMenu
+      value: 
+      objectReference: {fileID: 1155837139}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
