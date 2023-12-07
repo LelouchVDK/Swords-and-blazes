@@ -32,7 +32,7 @@ public class CowboyHealth : MonoBehaviour
 
         if (cowboyCurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             winState.text = "Winner is Knight";
             gameOverMenu.SetActive(true);
             self.constraints = RigidbodyConstraints2D.FreezePosition;

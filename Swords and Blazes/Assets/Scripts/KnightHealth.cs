@@ -31,7 +31,7 @@ public class KnightHealth : MonoBehaviour
 
         if (knightCurrentHealth <= 0 ) 
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             winner.text = "Winner is Cowboy";
             
             gameOverMenu.SetActive(true);
