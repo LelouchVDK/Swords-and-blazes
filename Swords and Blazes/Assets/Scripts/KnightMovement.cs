@@ -46,7 +46,7 @@ public class KnightMovement : MonoBehaviour
             {
                 Vector2 right = new(m_knightMovementSpeed, 0);
                 rb.AddForce(right);
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(1, 1, 1);
                 faceLeft = false;
                 // knightAnimator.SetBool("FaceLeftRight", true);
                 
@@ -59,7 +59,7 @@ public class KnightMovement : MonoBehaviour
             {
                 Vector2 left = new(-m_knightMovementSpeed, 0);
                 rb.AddForce(left);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(-1, 1, 1);
                 faceLeft = true;
                 // knightAnimator.SetBool("FaceLeftRight", true);
 

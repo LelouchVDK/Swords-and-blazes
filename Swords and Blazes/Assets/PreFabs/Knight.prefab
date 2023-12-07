@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 8822693432903015273}
   - component: {fileID: 4005184993576155584}
   m_Layer: 0
-  m_Name: knight
+  m_Name: Knight
   m_TagString: Knight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a8c298775b37e7649a77e3e69392af0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a60060e6d6de184d9a1b241af300d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knightMaxHealth: 100
+  knightMaxHealth: 200
   knightCurrentHealth: 0
   winner: {fileID: 0}
   opponent: {fileID: 7408375655862021108, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
