@@ -7,6 +7,7 @@ public class KnightHealth : MonoBehaviour
 {
     public int knightMaxHealth = 100;
     public int knightCurrentHealth;
+    private AudioSource knightDeath;
     public TextMeshProUGUI winner;
     public GameObject opponent;
     public Rigidbody2D opponentRB;
@@ -19,6 +20,7 @@ public class KnightHealth : MonoBehaviour
         opponentRB = GetComponent<Rigidbody2D>();
         knightCurrentHealth = knightMaxHealth;
         knightHealthBar.SetMaxHealth(knightMaxHealth);
+        knightDeath = GetComponent<AudioSource>();
     }
 
     public void KnightTakeDamage(int amount)
@@ -31,6 +33,7 @@ public class KnightHealth : MonoBehaviour
 
         if (knightCurrentHealth <= 0 ) 
         {
+            knightDeath.Play();
             Destroy(gameObject);
             winner.text = "Winner is Cowboy";
             
