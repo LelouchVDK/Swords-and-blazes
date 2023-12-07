@@ -623,8 +623,10 @@ MonoBehaviour:
   knightMaxHealth: 200
   knightCurrentHealth: 0
   winner: {fileID: 0}
-  opponent: {fileID: 7408375655862021108, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+  opponent: {fileID: 0}
+  opponentRB: {fileID: 0}
   knightHealthBar: {fileID: 3565462054553505140}
+  gameOverMenu: {fileID: 0}
 --- !u!114 &7127267193172994829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winnerText: {fileID: 0}
   winner: {fileID: 5816338768025604833}
+  GameOverMenu: {fileID: 0}
   CoinCounter: {fileID: 0}
 --- !u!95 &4005184993576155584
 Animator:
