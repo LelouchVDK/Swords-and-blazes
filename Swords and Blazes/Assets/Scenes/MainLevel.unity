@@ -1151,6 +1151,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9108326969564024746, guid: 1103a7e1d45694b41920ad89cc521e05, type: 3}
   m_PrefabInstance: {fileID: 663851100}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &697110707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3565462054553505140, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+  m_PrefabInstance: {fileID: 9172296059595569619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d9ab556e00e2e43b22ba6b04f055fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &699563167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3918,6 +3929,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5418922039987772889, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+      propertyPath: cowboyHealth
+      value: 
+      objectReference: {fileID: 4666684559840312474}
     - target: {fileID: 5816338768025604833, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: m_Name
       value: Knight
@@ -3937,11 +3952,15 @@ PrefabInstance:
     - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: opponentRB
       value: 
-      objectReference: {fileID: 9172296059595569620}
+      objectReference: {fileID: 4666684559840312476}
     - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: gameOverMenu
       value: 
       objectReference: {fileID: 1272006050}
+    - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+      propertyPath: knightHealthBar
+      value: 
+      objectReference: {fileID: 697110707}
     - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: knightMaxHealth
       value: 200
@@ -3995,11 +4014,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
---- !u!50 &9172296059595569620 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 5345447508738943620, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
-  m_PrefabInstance: {fileID: 9172296059595569619}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9172296059595569621 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
