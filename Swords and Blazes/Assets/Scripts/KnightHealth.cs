@@ -7,8 +7,9 @@ public class KnightHealth : MonoBehaviour
 {
     public int knightMaxHealth = 100;
     public int knightCurrentHealth;
-    private AudioSource knightHurt;
-    private AudioSource knightDeath;
+    public AudioClip knightHurt;
+    public AudioClip knightDeath;
+    private AudioSource knightSound;
     public TextMeshProUGUI winner;
     public GameObject opponent;
     public Rigidbody2D opponentRB;
@@ -21,8 +22,7 @@ public class KnightHealth : MonoBehaviour
         opponentRB = GetComponent<Rigidbody2D>();
         knightCurrentHealth = knightMaxHealth;
         knightHealthBar.SetMaxHealth(knightMaxHealth);
-        knightHurt = GetComponent<AudioSource>();
-        knightDeath = GetComponent<AudioSource>();
+        knightSound = GetComponent<AudioSource>();
     }
 
     public void KnightTakeDamage(int amount)
@@ -31,11 +31,13 @@ public class KnightHealth : MonoBehaviour
 
         knightHealthBar.SetHealth(knightCurrentHealth);
 
-        knightHurt.Play();
+        knightSound.clip = knightHurt;
+        knightSound.Play();
 
         if (knightCurrentHealth <= 0 ) 
         {
-            knightDeath.Play();
+            knightSound.clip = knightDeath;
+            knightSound.Play();
             gameObject.SetActive(false);
             winner.text = "Winner is Cowboy";
             

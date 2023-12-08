@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KnightSounds : MonoBehaviour
 {
+    public AudioClip sword;
     private AudioSource knightSlash;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class KnightSounds : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            knightSlash.clip = sword;
             knightSlash.Play();
         }
     }
