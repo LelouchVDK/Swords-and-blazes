@@ -11,11 +11,15 @@ public class CowboyMovement : MonoBehaviour
 
     Rigidbody2D rb;
     public float m_cowboyMovementSpeed;
+
+    private Animator cowboyAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
         
         rb = GetComponent<Rigidbody2D>();
+        cowboyAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -54,5 +58,13 @@ public class CowboyMovement : MonoBehaviour
             Vector2 down = new(0, -m_cowboyMovementSpeed);
             rb.AddForce(down);
         }
+
+        // The running animation.
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            cowboyAnimator.SetBool("cowboyRunning", true);
+        }
+        else { cowboyAnimator.SetBool("cowboyRunning", false); }
+
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -34,52 +35,53 @@ public class KnightMovement : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.Space))
         {
             knightAnimator.SetBool("Slash", false);
-        }
-
-      
+        } 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {     
-            if (Input.GetKey(KeyCode.D))
-            {
-                Vector2 right = new(m_knightMovementSpeed, 0);
-                rb.AddForce(right);
-                transform.localScale = new Vector3(1, 1, 1);
-                faceLeft = false;
-                // knightAnimator.SetBool("FaceLeftRight", true);
-                
-
-
+        if (Input.GetKey(KeyCode.D))
+        {
+            Vector2 right = new(m_knightMovementSpeed, 0);
+            rb.AddForce(right);
+            transform.localScale = new Vector3(1, 1, 1);
+            faceLeft = false;  
         }
+
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            Vector2 left = new(-m_knightMovementSpeed, 0);
+            rb.AddForce(left);
+            transform.localScale = new Vector3(-1, 1, 1);
+            faceLeft = true;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            Vector2 up = new(0, m_knightMovementSpeed);
+            rb.AddForce(up);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            Vector2 down = new(0, -m_knightMovementSpeed);
+            rb.AddForce(down);
+        }
+
+
+        // The running animation.
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            knightAnimator.SetBool("knightRunning", true);
+        }
+        else { knightAnimator.SetBool("knightRunning", false); }
+        
         
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                Vector2 left = new(-m_knightMovementSpeed, 0);
-                rb.AddForce(left);
-                transform.localScale = new Vector3(-1, 1, 1);
-                faceLeft = true;
-                // knightAnimator.SetBool("FaceLeftRight", true);
 
 
-        } 
-
-                
-            if (Input.GetKey(KeyCode.W))
-            {
-                Vector2 up = new(0, m_knightMovementSpeed);
-                rb.AddForce(up);
-                
-            }
-                
-            if (Input.GetKey(KeyCode.S))
-            {
-                Vector2 down = new(0, -m_knightMovementSpeed);
-                rb.AddForce(down);
-                
-            }
 
 
     }

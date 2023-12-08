@@ -587,6 +587,7 @@ GameObject:
   - component: {fileID: 4201422176739816876}
   - component: {fileID: 9033862959152410841}
   - component: {fileID: 4343918162001791933}
+  - component: {fileID: 4723055712704421440}
   m_Layer: 2
   m_Name: cowboy
   m_TagString: Cowboy
@@ -652,12 +653,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 813edd0d2830e824c99f1f6735a7940a, type: 3}
+  m_Sprite: {fileID: 1337956140, guid: d080e69e6aabb4c49bdcadf97fd913f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -798,7 +799,9 @@ MonoBehaviour:
   cowboyCurrentHealth: 0
   winState: {fileID: 0}
   opponent: {fileID: 0}
+  self: {fileID: 0}
   cowboyHealthBar: {fileID: 2268681200532942810}
+  gameOverMenu: {fileID: 0}
 --- !u!114 &6562117393377445256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,6 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winnerText: {fileID: 0}
   winner: {fileID: 7408375655862021108}
+  GameOverMenu: {fileID: 0}
   CoinCounter: {fileID: 0}
 --- !u!114 &9033862959152410841
 MonoBehaviour:
@@ -954,6 +958,27 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!95 &4723055712704421440
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408375655862021108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29fb012d9cbc72a42866dd935a6e02e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9110070905523742760
 GameObject:
   m_ObjectHideFlags: 0
