@@ -19,5 +19,9 @@ public class CowboySounds : MonoBehaviour
         {
             cowboyShoot.Play();
         }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            cowboyShoot.Stop();
+        }
     }
 }

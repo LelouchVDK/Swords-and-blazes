@@ -57,7 +57,7 @@ public class Shoot : MonoBehaviour
     {
 
         
-        if (collision.transform.CompareTag("Knight"))
+        if (collision.transform.CompareTag("Knight") || collision.transform.CompareTag("Cowboy"))
         {
             knightHealth.KnightTakeDamage(bulletDamage);
         }

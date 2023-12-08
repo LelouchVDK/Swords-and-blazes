@@ -37,6 +37,8 @@ public class KnightHealth : MonoBehaviour
         if (knightCurrentHealth <= 0 ) 
         {
             knightSound.clip = knightDeath;
+            GameObject.Find("SoundGuy").GetComponent<AudioSource>().PlayOneShot(knightDeath);
+
             knightSound.Play();
             gameObject.SetActive(false);
             winner.text = "Winner is Cowboy";

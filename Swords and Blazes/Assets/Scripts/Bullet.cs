@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
         {
             KnightHealth knightHealth = collision.gameObject.GetComponent<KnightHealth>();
             knightHealth.KnightTakeDamage(20);
+            Destroy(gameObject);
             
         }
         Destroy(gameObject, 0.5f);
