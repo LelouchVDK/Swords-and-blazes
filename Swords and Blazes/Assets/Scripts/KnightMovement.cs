@@ -74,9 +74,9 @@ public class KnightMovement : MonoBehaviour
         // The running animation.
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            knightAnimator.SetBool("Running", true);
+            knightAnimator.SetBool("knightRunning", true);
         }
-        else { knightAnimator.SetBool("Running", false); }
+        else { knightAnimator.SetBool("knightRunning", false); }
         
         
 

@@ -2634,10 +2634,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4195666933285046956, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4201422176739816876, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: winnerText
       value: 
@@ -2650,6 +2646,10 @@ PrefabInstance:
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 1155837139}
+    - target: {fileID: 4322455494684860631, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: self
       value: 
@@ -2681,6 +2681,10 @@ PrefabInstance:
     - target: {fileID: 7408375655862021108, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: m_Name
       value: cowboy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028533585174902825, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 9033862959152410841, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: knight
