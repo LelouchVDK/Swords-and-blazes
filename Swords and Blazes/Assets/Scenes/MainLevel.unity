@@ -3825,6 +3825,10 @@ PrefabInstance:
       propertyPath: GameOverMenu
       value: 
       objectReference: {fileID: 1272006050}
+    - target: {fileID: 4343918162001791933, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: self
       value: 
