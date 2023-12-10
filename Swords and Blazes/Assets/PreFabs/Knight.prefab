@@ -422,7 +422,6 @@ GameObject:
   - component: {fileID: 8713960770981097076}
   - component: {fileID: 4577731715407443140}
   - component: {fileID: 8734127918006860600}
-  - component: {fileID: 7127267193172994829}
   - component: {fileID: 4892492274429258674}
   - component: {fileID: 8822693432903015273}
   - component: {fileID: 4005184993576155584}
@@ -622,26 +621,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knightMaxHealth: 200
   knightCurrentHealth: 0
+  knightHurt: {fileID: 0}
+  knightDeath: {fileID: 0}
   winner: {fileID: 0}
   opponent: {fileID: 0}
   opponentRB: {fileID: 0}
   knightHealthBar: {fileID: 3565462054553505140}
   gameOverMenu: {fileID: 0}
---- !u!114 &7127267193172994829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5816338768025604833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a6751a72805a449bed3319e036a668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cowboyHealth: {fileID: 0}
-  knightHealth: {fileID: 8734127918006860600}
-  bullet: {fileID: 0}
 --- !u!114 &4892492274429258674
 MonoBehaviour:
   m_ObjectHideFlags: 0
