@@ -4,6 +4,7 @@ using System.Collections;
 using System;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 
 public class Shoot : MonoBehaviour
 {
@@ -21,22 +22,60 @@ public class Shoot : MonoBehaviour
     // public Transform bulletMover;
     public int bulletSpeed;
     public int bulletDamage;
+    public int load;
     public bool FaceLeft { get; private set; } = true;
-
+    private IEnumerator Blt;
 
     // Start is called before the first frame update
     void Start()
     {
         _ = Input.mousePosition;
         _ = cowboy.GetComponent<CowboyMovement>();
+        load = 6;
     }
     
     void Update()
     {
+        IEnumerator Shot(Vector2 target)
+        {
+            //Starting position
+            Vector2 origin = (Vector2)transform.position + currentOffset;
+            //Direction position
+            Vector2 dir = target - origin;
+            RaycastHit2D ray = Physics2D.Raycast(origin, dir);
+            RaycastHit2D hits = Physics2D.RaycastAll(origin, dir).Where(x => x.collider.gameObject != gameObject).FirstOrDefault();
+            Vector2 end = ray.point;
+            render.SetPosition(0, origin);
+            render.SetPosition(1, end);
+
+
+            if (load == 0)
+            {
+                yield return new WaitForSecondsRealtime(5);
+                load = 6;
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    GameObject bullet = Instantiate(bulletPrefab, origin, transform.rotation);
+                    // bulletMover = bullet.GetComponent<Transform>();
+                    Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
+                    rbBullet.velocity = dir.normalized * bulletSpeed;
+                    // bulletPrefab.transform.Translate(end);
+                    cowboy.GetComponent<Rigidbody2D>().AddForce(-knockback * dir.normalized);
+                    load--;
+                }
+            }
+            currentOffset = FaceLeft ? offsetLeft : OffsetRight;
+        }
+
 
         Vector2 screen_pos = Input.mousePosition;
         Vector2 world_pos = Camera.main.ScreenToWorldPoint(screen_pos);
-        Shooter(world_pos);
+        Blt = Shot(world_pos);
+        StartCoroutine(Blt);
+        //Shooter(world_pos);
 
         if (world_pos.x < transform.position.x)
         {
