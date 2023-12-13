@@ -7,6 +7,10 @@ public class CowboyHealth : MonoBehaviour
 {
     public int cowboyMaxHealth = 100;
     public int cowboyCurrentHealth;
+    public AudioClip cowboyHit;
+    public AudioClip cowboySwordHit;
+    public AudioClip cowboyDeath;
+    private AudioSource cowboyHitSound;
     public TextMeshProUGUI winState;
     public GameObject opponent;
     public Rigidbody2D self;
@@ -20,6 +24,7 @@ public class CowboyHealth : MonoBehaviour
         self = GetComponent<Rigidbody2D>();
         cowboyCurrentHealth = cowboyMaxHealth;
         cowboyHealthBar.SetMaxHealth(cowboyMaxHealth);
+        cowboyHitSound = GetComponent<AudioSource>();
     }
 
     
@@ -29,9 +34,23 @@ public class CowboyHealth : MonoBehaviour
 
         cowboyHealthBar.SetHealth(cowboyCurrentHealth);
 
+        if (amount == 10)
+        {
+            cowboyHitSound.clip = cowboyHit;
+            cowboyHitSound.Play();
+        }
+        else if (amount == 20) 
+        {
+            cowboyHitSound.clip = cowboySwordHit;
+            cowboyHitSound.Play();
+        }
+        
 
         if (cowboyCurrentHealth <= 0)
         {
+            cowboyHitSound.clip = cowboyDeath;
+            cowboyHitSound.Play();
+
             gameObject.SetActive(false);
             winState.text = "Winner is Knight";
             gameOverMenu.SetActive(true);
