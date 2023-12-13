@@ -4,7 +4,6 @@ using System.Collections;
 using System;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.Animations;
 
 public class Shoot : MonoBehaviour
 {
