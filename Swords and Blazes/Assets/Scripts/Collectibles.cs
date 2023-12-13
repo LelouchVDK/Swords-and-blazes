@@ -38,7 +38,6 @@ public class Collectibles : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
-
             collision.gameObject.SetActive(false);
             
             
