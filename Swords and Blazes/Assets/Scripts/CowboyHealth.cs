@@ -49,6 +49,8 @@ public class CowboyHealth : MonoBehaviour
         if (cowboyCurrentHealth <= 0)
         {
             cowboyHitSound.clip = cowboyDeath;
+            GameObject.Find("SoundGuy").GetComponent<AudioSource>().PlayOneShot(cowboyDeath);
+
             cowboyHitSound.Play();
 
             gameObject.SetActive(false);
