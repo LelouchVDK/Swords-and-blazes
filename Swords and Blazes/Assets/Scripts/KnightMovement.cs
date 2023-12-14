@@ -12,6 +12,8 @@ public class KnightMovement : MonoBehaviour
     [HideInInspector] public bool faceLeft;
     private Animator knightAnimator;
 
+    public ParticleSystem dust2;
+
     public delegate void HitAction();
     public event HitAction OnHitAction;
 
@@ -46,7 +48,9 @@ public class KnightMovement : MonoBehaviour
             Vector2 right = new(m_knightMovementSpeed, 0);
             rb.AddForce(right);
             transform.localScale = new Vector3(1, 1, 1);
-            faceLeft = false;  
+            faceLeft = false;
+
+            CreateDust2();
         }
 
 
@@ -56,18 +60,25 @@ public class KnightMovement : MonoBehaviour
             rb.AddForce(left);
             transform.localScale = new Vector3(-1, 1, 1);
             faceLeft = true;
+
+            CreateDust2(); 
+
         }
 
         if (Input.GetKey(KeyCode.W))
         {
             Vector2 up = new(0, m_knightMovementSpeed);
             rb.AddForce(up);
+
+            CreateDust2();
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             Vector2 down = new(0, -m_knightMovementSpeed);
             rb.AddForce(down);
+
+            CreateDust2();
         }
 
 
@@ -80,7 +91,10 @@ public class KnightMovement : MonoBehaviour
         
         
 
-
+        void CreateDust2()
+        {
+            dust2.Play();
+        }
 
 
 

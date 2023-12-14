@@ -12,6 +12,8 @@ public class CowboyMovement : MonoBehaviour
     Rigidbody2D rb;
     public float m_cowboyMovementSpeed;
 
+    public ParticleSystem dust;
+
     private Animator cowboyAnimator;
 
     // Start is called before the first frame update
@@ -31,7 +33,7 @@ public class CowboyMovement : MonoBehaviour
             rb.AddForce(right);
             //transform.localScale = new Vector3(-1, 1, 1);
             //FaceLeft = false;
-
+            CreateDust();
         }
             
 
@@ -42,6 +44,7 @@ public class CowboyMovement : MonoBehaviour
             rb.AddForce(left);
             //transform.localScale = new Vector3(1, 1, 1);
             //FaceLeft = true;
+            CreateDust();
         }
 
         
@@ -51,12 +54,16 @@ public class CowboyMovement : MonoBehaviour
         {
             Vector2 up = new(0, m_cowboyMovementSpeed);
             rb.AddForce(up);
+
+            CreateDust();
         }
                 
         if (Input.GetKey(KeyCode.DownArrow))
         {
             Vector2 down = new(0, -m_cowboyMovementSpeed);
             rb.AddForce(down);
+
+            CreateDust();
         }
 
         // The running animation.
@@ -65,6 +72,13 @@ public class CowboyMovement : MonoBehaviour
             cowboyAnimator.SetBool("cowboyRunning", true);
         }
         else { cowboyAnimator.SetBool("cowboyRunning", false); }
+
+        // Dust trail 
+
+        void CreateDust()
+        {
+            dust.Play();
+        }
 
     }
 }
