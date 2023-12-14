@@ -13,15 +13,14 @@ public class CowboyHealth : MonoBehaviour
     private AudioSource cowboyHitSound;
     public TextMeshProUGUI winState;
     public GameObject opponent;
-    public Rigidbody2D self;
 
     public CowboyHealthBar cowboyHealthBar;
     public GameObject gameOverMenu;
+    public KnightMovement NoMove;
 
     // Start is called before the first frame update
     void Start()
     {
-        self = GetComponent<Rigidbody2D>();
         cowboyCurrentHealth = cowboyMaxHealth;
         cowboyHealthBar.SetMaxHealth(cowboyMaxHealth);
         cowboyHitSound = GetComponent<AudioSource>();
@@ -52,11 +51,10 @@ public class CowboyHealth : MonoBehaviour
             GameObject.Find("SoundGuy").GetComponent<AudioSource>().PlayOneShot(cowboyDeath);
 
             cowboyHitSound.Play();
-
+            NoMove.m_knightMovementSpeed = 0;
             gameObject.SetActive(false);
             winState.text = "Winner is Knight";
             gameOverMenu.SetActive(true);
-            self.constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
 }

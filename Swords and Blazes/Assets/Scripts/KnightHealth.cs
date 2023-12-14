@@ -13,6 +13,7 @@ public class KnightHealth : MonoBehaviour
     public TextMeshProUGUI winner;
     public GameObject opponent;
     public Rigidbody2D opponentRB;
+    public CowboyMovement noMove;
 
     public KnightHealthBar knightHealthBar;
     public GameObject gameOverMenu;
@@ -38,7 +39,7 @@ public class KnightHealth : MonoBehaviour
         {
             knightSound.clip = knightDeath;
             GameObject.Find("SoundGuy").GetComponent<AudioSource>().PlayOneShot(knightDeath);
-
+            noMove.m_cowboyMovementSpeed = 0;
             knightSound.Play();
             gameObject.SetActive(false);
             winner.text = "Winner is Cowboy";

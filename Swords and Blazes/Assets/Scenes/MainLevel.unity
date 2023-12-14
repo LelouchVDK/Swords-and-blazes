@@ -545,7 +545,7 @@ Camera:
   far clip plane: 1000
   field of view: 50
   orthographic: 1
-  orthographic size: 9.137296
+  orthographic size: 6.7868524
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3818,6 +3818,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4666684559840312476}
     - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+      propertyPath: NoMove
+      value: 
+      objectReference: {fileID: 9172296059595569636}
+    - target: {fileID: 4439745926128903951, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
       propertyPath: opponent
       value: 
       objectReference: {fileID: 108129101}
@@ -4478,6 +4482,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4666684559840312501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 372625579515443325, guid: 4872ef6ea1ef52f4d8eff2c8b2719de0, type: 3}
+  m_PrefabInstance: {fileID: 4666684559840312473}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4666684559840312475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2aab653178d43d47a4bbb113eb972af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5889473581471553451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4665,6 +4680,10 @@ PrefabInstance:
       propertyPath: cowboyHealth
       value: 
       objectReference: {fileID: 4666684559840312474}
+    - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+      propertyPath: noMove
+      value: 
+      objectReference: {fileID: 4666684559840312501}
     - target: {fileID: 8734127918006860600, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
       propertyPath: winner
       value: 
@@ -5180,6 +5199,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9172296059595569636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4892492274429258674, guid: 48ac15a2e1a0f7648bb68e8f072e39e6, type: 3}
+  m_PrefabInstance: {fileID: 9172296059595569619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108129101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d067ea8ea9a32df42a466f83ad23682c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
