@@ -100,7 +100,7 @@ public class Shoot : MonoBehaviour
             knightHealth.KnightTakeDamage(bulletDamage);
         }
     }
-    
+    /*
     /// <summary>
     /// Aims with the white line at thingies and uses an if statement to instantiate a bullet
     /// at the end of a line.
@@ -130,4 +130,5 @@ public class Shoot : MonoBehaviour
         }
         currentOffset = FaceLeft ? offsetLeft : OffsetRight;
     }
+    */
 }

@@ -11,6 +11,8 @@ public class Collectibles : MonoBehaviour
     public TextMeshProUGUI winnerText;
     public GameObject winner;
     public GameObject GameOverMenu;
+    public KnightMovement noKnightMove;
+    public CowboyMovement noCowboyMove;
     
     
 
@@ -49,6 +51,14 @@ public class Collectibles : MonoBehaviour
             {
                 winnerText.text = "Winner is " + winner.tag;
                 GameOverMenu.SetActive(true);
+                if (winner.CompareTag("Knight"))
+                {
+                    noKnightMove.m_knightMovementSpeed = 0;
+                }
+                if (winner.CompareTag("Cowboy"))
+                {
+                    noCowboyMove.m_cowboyMovementSpeed = 0;
+                }
 
             }
 
