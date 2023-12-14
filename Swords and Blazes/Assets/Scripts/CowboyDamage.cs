@@ -10,6 +10,8 @@ public class CowboyDamage : MonoBehaviour
 {
     public KnightHealth knightHealth;
     public CowboyHealth cowboyHealth;
+
+    public ParticleSystem blood2;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -18,6 +20,14 @@ public class CowboyDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Cactus") || collision.gameObject.CompareTag("Knight"))
         {
             cowboyHealth.CowboyTakeDamage(10);
+            BloodSplash2();
         }
     }
+
+    void BloodSplash2()
+    {
+        blood2.Play();
+    }
+
+
 }

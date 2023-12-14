@@ -15,6 +15,8 @@ public class KnightHealth : MonoBehaviour
     public Rigidbody2D opponentRB;
     public CowboyMovement noMove;
 
+    public ParticleSystem blood1;
+
     public KnightHealthBar knightHealthBar;
     public GameObject gameOverMenu;
     // Start is called before the first frame update
@@ -35,6 +37,8 @@ public class KnightHealth : MonoBehaviour
         knightSound.clip = knightHurt;
         knightSound.Play();
 
+        BloodSplash1();
+
         if (knightCurrentHealth <= 0 ) 
         {
             knightSound.clip = knightDeath;
@@ -43,9 +47,17 @@ public class KnightHealth : MonoBehaviour
             knightSound.Play();
             gameObject.SetActive(false);
             winner.text = "Winner is Cowboy";
-            
+
+            BloodSplash1();
+
             gameOverMenu.SetActive(true);
             opponentRB.constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
+
+    void BloodSplash1()
+    {
+        blood1.Play();
+    }
+
 }
