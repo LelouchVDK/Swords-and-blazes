@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1399585674648762566}
   - component: {fileID: 68713276942900175}
   - component: {fileID: 1012040685237082283}
+  - component: {fileID: 3216273047194845195}
+  - component: {fileID: 9070319990651780980}
+  - component: {fileID: 3317765501193665015}
   m_Layer: 0
   m_Name: cactus
   m_TagString: Cactus
@@ -120,3 +123,66 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.43, y: 3.6}
   m_Direction: 0
+--- !u!114 &3216273047194845195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742563230679932491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.31699097, y: -1.8664947, z: 0}
+  - {x: -0.147075, y: -1.6167841, z: 0}
+  - {x: 0.2684435, y: -1.6531947, z: 0}
+  - {x: 0.26844358, y: -1.8907683, z: 0}
+  m_ShapePathHash: 1238485398
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 43128
+  m_LocalBounds:
+    m_Center: {x: -0.024273694, y: -1.7537762, z: 0}
+    m_Extent: {x: 0.29271728, y: 0.1369921, z: 0}
+--- !u!95 &9070319990651780980
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742563230679932491}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46bde0c6871b7de4bbc5a0a5822bbb76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3317765501193665015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742563230679932491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d79e9230e96ceb47b4656c9a970aaae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
