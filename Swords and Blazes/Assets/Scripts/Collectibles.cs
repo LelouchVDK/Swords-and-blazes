@@ -11,6 +11,7 @@ public class Collectibles : MonoBehaviour
     public TextMeshProUGUI winnerText;
     public GameObject winner;
     public GameObject GameOverMenu;
+    public GameObject PauseMenu;
     public KnightMovement noKnightMove;
     public CowboyMovement noCowboyMove;
     
@@ -23,13 +24,20 @@ public class Collectibles : MonoBehaviour
     }
 
     // Update is called once per frame
-    
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.P))
+        {
+            PauseMenu.SetActive(true);
+        }
+    }
+
 
     //IEnumerator Respawn (Collider2D collision, int time)
     //{
-       // yield return new WaitForSeconds(time);
+    // yield return new WaitForSeconds(time);
 
-        //collision.gameObject.SetActive(true);
+    //collision.gameObject.SetActive(true);
     //} 
 
 
