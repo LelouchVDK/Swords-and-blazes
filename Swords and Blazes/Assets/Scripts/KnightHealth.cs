@@ -56,7 +56,7 @@ public class KnightHealth : MonoBehaviour
             BloodSplash1();
 
             gameOverMenu.SetActive(true);
-            opponentRB.constraints = RigidbodyConstraints2D.FreezePosition;
+            //opponentRB.constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
 
