@@ -62,13 +62,12 @@ public class Collectibles : MonoBehaviour
 
             }
 
-            //StartCoroutine (Respawn(collision,6));
-            spawner.SpawnCoins();
-        else
-{
-Destroy(collision.gameObject);
-spawner.SpawnCoins();
-} 
+            // StartCoroutine (Respawn(collision,6));
+            // spawner.SpawnCoins();
+
+        else { Destroy(collision.gameObject);
+                spawner.SpawnCoins();
+            } 
             
         }
     }
