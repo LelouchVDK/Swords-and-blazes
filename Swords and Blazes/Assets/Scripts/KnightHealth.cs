@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
 
 public class KnightHealth : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class KnightHealth : MonoBehaviour
     public CowboyMovement noMove;
 
     public ParticleSystem blood1;
+    private CinemachineImpulseSource impulseSource;
 
     public KnightHealthBar knightHealthBar;
     public GameObject gameOverMenu;
@@ -26,11 +28,14 @@ public class KnightHealth : MonoBehaviour
         knightCurrentHealth = knightMaxHealth;
         knightHealthBar.SetMaxHealth(knightMaxHealth);
         knightSound = GetComponent<AudioSource>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     public void KnightTakeDamage(int amount)
     {
         knightCurrentHealth -= amount;
+
+        CamaraShakeManager.instance.CameraShake(impulseSource);
 
         knightHealthBar.SetHealth(knightCurrentHealth);
 

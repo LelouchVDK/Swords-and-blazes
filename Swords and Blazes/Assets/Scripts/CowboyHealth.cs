@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Cinemachine;
 
 public class CowboyHealth : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class CowboyHealth : MonoBehaviour
     public TextMeshProUGUI winState;
     public GameObject opponent;
 
+    private CinemachineImpulseSource impulseSource;
+
     public CowboyHealthBar cowboyHealthBar;
     public GameObject gameOverMenu;
     public KnightMovement NoMove;
@@ -24,12 +27,15 @@ public class CowboyHealth : MonoBehaviour
         cowboyCurrentHealth = cowboyMaxHealth;
         cowboyHealthBar.SetMaxHealth(cowboyMaxHealth);
         cowboyHitSound = GetComponent<AudioSource>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     
     public void CowboyTakeDamage(int amount)
     {
         cowboyCurrentHealth -= amount;
+
+        CamaraShakeManager.instance.CameraShake(impulseSource);
 
         cowboyHealthBar.SetHealth(cowboyCurrentHealth);
 
